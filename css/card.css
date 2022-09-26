@@ -1,0 +1,101 @@
+/*card 1*/
+.card{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "descricao-titulo img"
+        "titulo-livro img"
+        "descricao img"
+        "icones botao"
+    ;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 20px 24px;
+    gap: 10px;
+}
+
+.descricao__titulo{
+    font-weight: 700;
+    color: var(--laranja);
+    grid-area: descricao-titulo;
+}
+
+.descricao__titulo-livro{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--azul-marinho);
+    grid-area: titulo-livro;
+}
+
+.descricao__texto{
+    font-size: 14px;
+    line-height: 21px;
+    grid-area: descricao;
+}
+
+.card__icones{
+    grid-area: icones;
+}
+
+.card__botao{
+    grid-area: botao;
+    display: inline;
+    display: flex;
+    color: var(--branco);
+    background-color: var(--laranja);
+    font-weight: 700;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    height: 48px;    
+    width: 100%; 
+}
+
+.descricao__img{
+    grid-area: img;
+}
+
+.card__icones{
+    padding-left: 0.5em;
+}
+
+.icone__favorito{
+    margin-right: 1em;
+}
+
+/*card 2*/
+.card-2{
+    grid-template-areas:
+        "nota img"
+        "descricao-titulo img"
+        "titulo-livro img"
+        "descricao img"
+        "icones botao"
+    ;
+    
+}
+
+.card__nota{
+    grid-area: nota;
+}
+
+@media screen and (min-width: 1024px) {
+    .card {
+        width: 40%;
+        margin: 2em auto;
+    }
+    
+}
+
+@media screen and (min-width: 1728px) {
+    .card{
+        height: 40%;
+        width: 100%;
+    }
+
+    .descricao__titulo{
+        font-size: 32px;
+    }
+    
+}
