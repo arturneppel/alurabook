@@ -52,6 +52,7 @@
 
 .container__botao:checked ~ .lista-menu{    
     display: block;
+    z-index: 50000;
 }
 
 .lista-menu__titulo{
